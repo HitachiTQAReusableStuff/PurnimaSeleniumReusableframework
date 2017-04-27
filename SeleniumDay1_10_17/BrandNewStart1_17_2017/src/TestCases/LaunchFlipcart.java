@@ -35,7 +35,7 @@ import CommonUtilities.Utilities;
 	     
 	        Utilities.WebButton(ReadConfig.ReadConfigFile("AddtocartButtonxpath"),"searchlinktext");
 	        Utilities.WebButton(ReadConfig.ReadConfigFile("GotoCartxpath"),"AddtoCart");
-	//purnimaedited line
+
 	          Utilities.WebButton(ReadConfig.ReadConfigFile("Removelinkxpath"),"Removeitemfromcart");
 	 
 	        }
