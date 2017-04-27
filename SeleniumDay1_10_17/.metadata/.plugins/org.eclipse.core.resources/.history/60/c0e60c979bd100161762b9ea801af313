@@ -1,0 +1,15 @@
+package PracticeJavamethod;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class Launchurl{
+private static WebDriver driver;
+public static void main(String[] args) {
+
+	driver = new FirefoxDriver();
+	//driver.get("https://nshore.hitachiconsulting.net/login/");
+	}
+}

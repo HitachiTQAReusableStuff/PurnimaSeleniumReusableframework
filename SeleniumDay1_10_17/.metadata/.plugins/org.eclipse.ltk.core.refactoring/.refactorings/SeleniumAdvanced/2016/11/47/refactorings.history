@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;LoginNshore.java&apos; to &apos;SeleniumAdvanced/src/TrngJavaClass_MainMethodActions&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumAdvanced&apos;&#x0D;&#x0A;- Destination element: &apos;SeleniumAdvanced/src/TrngJavaClass_MainMethodActions&apos;&#x0D;&#x0A;- Original element: &apos;TrngJavaClass_MainMethodActions.LoginNshore.java&apos;" description="Copy compilation unit" destination="/src&lt;TrngJavaClass_MainMethodActions" element1="/src&lt;TrngJavaClass_MainMethodActions{LoginNshore.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1479468816322" units="1" version="1.0"/>
+</session>

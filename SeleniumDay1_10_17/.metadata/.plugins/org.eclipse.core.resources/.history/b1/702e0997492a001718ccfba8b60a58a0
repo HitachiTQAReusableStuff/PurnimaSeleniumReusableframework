@@ -1,0 +1,72 @@
+Gmailurl=https://mail.google.com
+GmailUsernameXpath=Email
+GmailUsername1=purnima700
+GmailNextButtonXpath=.//*[@id='next']
+GmailPasswordXpath=Passwd
+GmailPasswordvalue=rithu@purnima
+GmailSigninButton=.//*[@id='signIn']
+ComposeButtonXapth=.//*[@id=':y5']/div/div
+FilePath=C:\\Users\\v-poori\\SeleniumDay1_10_17\\SeleniumFrameworkBuildProject\\src\\TestData
+FileName=ExcelTestdata.xlsx
+SheetName=Credentials
+gmailsettingshref=https://www.google.co.in/intl/en/options/
+gmailhref=https://mail.google.com/mail/
+ClassName=T-I J-J5-Ji ash T-I-ax7 L3
+Settingsid1=.//*[@id=':2l']/div[2]
+conversationsperpage=html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[1]/div/table/tbody/tr[3]/td[2]/table/tbody/tr[1]/td/select
+conversationsperpageValue=50
+Settingoptionvalue=4
+ImagesRadioButtonxpath=html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[1]/div/table/tbody/tr[4]/td[2]/table[1]/tbody/tr/td[1]/input
+undosendxpath=html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[1]/div/table/tbody/tr[9]/td[2]/input
+savechanges=html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[1]/div/table/tbody/tr[22]/td/div/button[1]
+settingxpath=.//*[@id=':kh']
+dropdowntext=settings
+ComposeButton=html/body/div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/div/div
+MWindowtitle=Settings - purnima700@gmail.com - Gmail 
+ToField=html/body/div[10]/div/div/div/div[1]/div[3]/div[1]/div[1]/div/div/div/div[3]/div/div/div[4]/table/tbody/tr/td[2]/form/div[1]/table/tbody/tr[1]/td[2]/div/div/textarea
+ToValue=venkat49k
+GmailUsername=Gmail Username
+GmailPassword=Gmail Password
+NextButton=Next Button
+GmailSignInButton=Gmail SignIn Button
+ClickGmailOptions=Click Gmail Options
+SelectGmail=Select Gmail
+ClickSettingDropdown=Click Setting Dropdown
+SelectSettings=Select Settings
+Selectconversationsperpage=Set conversations per page
+ImagesRadioButton=selectImagesRadioButton
+undosendxpath=check undo send xpath
+Savechages=Save Settings made
+Composeclick=ComposeButton
+Flipcarturl=https://www.flipkart.com/
+LogInhref=/account/login?ret=/
+ActualMobileSelection=/apple-iphone-7-rose-gold-32-gb/p
+FlipcartUsernamexpath=html/body/div[3]/div/div/div/div/div[2]/div/form/div[1]/input
+FlipcartPasswordXpath=html/body/div[3]/div/div/div/div/div[2]/div/form/div[2]/input
+FlipCartUserName=FlipCartUserName
+FlipCartPassword=FlipCartPassword
+FlipcartUsername=8008366966
+FlipcartPassword=rithu@purnima
+FlipcartSignInButtonXpath=html/body/div[3]/div/div/div/div/div[2]/div/form/div[3]/button
+FlipcartSearchBoxxpath=.//*[@id='container']/div/header/div[1]/div[2]/div/div/div[2]/form/div/div[1]/div/input
+SearchValue1=Fridge
+SearchButtonxpath=.//*[@id='container']/div/header/div[1]/div[2]/div/div/div[2]/form/div/div[2]/button
+ActualSearchValue=IPhone 7
+SearchField=SearchField
+searchlinktext=/apple-iphone-7-rose
+AddtocartButtonxpath=.//*[@id='container']/div/div[2]/div/div/div[1]/div/div[1]/div/div/div[2]/ul/li[1]/button
+GotoCartxpath=.//*[@id='container']/div/header/div[1]/div[2]/div/div/a
+Removelinkxpath=.//*[@id='container']/div/div[2]/div/div[1]/div[2]/div/div[2]/div[2]/div[2]/span/span
+AddtoCart=Add To Cart
+Removeitemfromcart=Removeitemfromcart
+Actualselectionxpath=.//*[@id='container']/div/div[2]/div[2]/div/div[2]/div[3]/div[1]/div[4]/a/div[2]/div[1]/div[1]
+DivClassname=_3wU53n
+anchorClassname=_1UoZlX
+LinkSelection=LinkSelection
+linktext=iPhone 7
+
+
+
+
+
+

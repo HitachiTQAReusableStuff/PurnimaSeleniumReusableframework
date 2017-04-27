@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46" started-at="2016-10-27T07:13:02Z" finished-at="2016-10-27T07:13:02Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="46" started-at="2016-10-27T07:13:02Z" finished-at="2016-10-27T07:13:02Z">
+      <class name="SeleniumDay1Learning.TestNGCodeinJunitcase">
+        <test-method status="PASS" signature="BSuite()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="BSuite" is-config="true" duration-ms="12" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BSuite -->
+        <test-method status="PASS" signature="BClass()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="BClass" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BClass -->
+        <test-method status="PASS" signature="Bmethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Bmethod" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="test1" duration-ms="8" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="Amethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Amethod" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Amethod -->
+        <test-method status="PASS" signature="Bmethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Bmethod" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="test2()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="test2" duration-ms="3" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="Amethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Amethod" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Amethod -->
+        <test-method status="PASS" signature="Bmethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Bmethod" is-config="true" duration-ms="0" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Bmethod -->
+        <test-method status="PASS" signature="testmethod1()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="testmethod1" duration-ms="4" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod1 -->
+        <test-method status="PASS" signature="Amethod()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Amethod" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Amethod -->
+        <test-method status="PASS" signature="Aclass()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="Aclass" is-config="true" duration-ms="1" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Aclass -->
+        <test-method status="PASS" signature="ASuite()[pri:0, instance:SeleniumDay1Learning.TestNGCodeinJunitcase@548a9f61]" name="ASuite" is-config="true" duration-ms="0" started-at="2016-10-27T12:43:02Z" finished-at="2016-10-27T12:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ASuite -->
+      </class> <!-- SeleniumDay1Learning.TestNGCodeinJunitcase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

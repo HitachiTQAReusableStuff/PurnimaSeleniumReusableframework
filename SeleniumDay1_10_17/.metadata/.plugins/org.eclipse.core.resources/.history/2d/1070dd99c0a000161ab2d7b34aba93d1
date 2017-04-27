@@ -1,0 +1,39 @@
+package TestCases;
+import java.io.IOException;
+import org.apache.log4j.Logger;
+import org.junit.Test;
+import UtilityMethods.LaunchApp;
+import UtilityMethods.LoadConfig;
+
+public class LoginNshore {
+
+	
+	static Logger APPLICATION_LOGS=Logger.getLogger("devpinoyLogger");
+	@Test
+	public  void NshoreLogin() throws IOException, InterruptedException {
+
+		
+		APPLICATION_LOGS.debug("Successfull Logged Sopper Poornims");
+		LaunchApp.LaunchApplicationNshore();
+		LaunchApp.Screenprintcapture("NshoreLandingPage");
+		LaunchApp.InputText(LoadConfig.ReadConfigFile("NshoreUserNameXpath"),LoadConfig.ReadConfigFile("NshoreUsernameValue"));
+		LaunchApp.InputText(LoadConfig.ReadConfigFile("NshorePasswordXpath"),LoadConfig.ReadConfigFile("NshorePasswordValue"));
+		LaunchApp.WebButton(LoadConfig.ReadConfigFile("NshoreLoginSubmit"));
+		LaunchApp.GetFrames(LoadConfig.ReadConfigFile("NshoreLogOutXpath"));
+		LaunchApp.GetAttribute("frame", "img");
+		LaunchApp.Screenprintcapture("NshoreLoggedInPage");
+		
+		}
+    /*   @Test
+	public void gmaillogin() throws IOException
+	{
+		LaunchApp.LaunchApplicationgmail();
+		LaunchApp.InputText(LoadConfig.ReadConfigFile("GmailUsernameXpath"),LoadConfig.ReadConfigFile("GmailUsername"));
+		LaunchApp.WebButton(LoadConfig.ReadConfigFile("GmailNextButtonXpath"));
+		LaunchApp.InputText(LoadConfig.ReadConfigFile("GmailPasswordXpath"),LoadConfig.ReadConfigFile("GmailPasswordvalue"));
+		LaunchApp.WebButton(LoadConfig.ReadConfigFile("GmailSigninButton"));
+		}
+	
+	*/
+
+}

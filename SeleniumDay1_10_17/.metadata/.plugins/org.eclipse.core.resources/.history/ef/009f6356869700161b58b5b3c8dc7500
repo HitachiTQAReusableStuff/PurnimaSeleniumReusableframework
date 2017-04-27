@@ -1,0 +1,14 @@
+package SeleniumDay1Learning;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RunTestsperpriorityTestNG {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

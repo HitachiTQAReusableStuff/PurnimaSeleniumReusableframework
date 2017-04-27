@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;GenerateReport.java&apos; to &apos;BrandNewStart1_17_2017/src/CommonUtilities&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumFrameworkBuildProject&apos;&#x0D;&#x0A;- Destination element: &apos;BrandNewStart1_17_2017/src/CommonUtilities&apos;&#x0D;&#x0A;- Original element: &apos;UtilityMethods.GenerateReport.java&apos;" description="Copy compilation unit" destination="=BrandNewStart1_17_2017/src&lt;CommonUtilities" element1="/src&lt;UtilityMethods{GenerateReport.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1484729839151" units="1" version="1.0"/>
+</session>

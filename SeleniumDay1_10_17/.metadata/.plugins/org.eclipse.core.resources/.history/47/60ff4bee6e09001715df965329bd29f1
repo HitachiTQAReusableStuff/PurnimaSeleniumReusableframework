@@ -1,0 +1,334 @@
+package CommonUtilities;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.JavascriptExecutor;
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Utilities {
+	private static WebDriver driver;
+	static Logger APPLICATION_LOGS=Logger.getLogger("devpinoyLogger");
+	public static void LaunchApp(String URL){
+		
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\v-poori\\Desktop\\selenium\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+	  driver.get(URL);
+		APPLICATION_LOGS.debug("Launched url" + "  "+URL);
+	}
+	
+	public static void InputText(String xpath,String Value,String Label)
+	{
+		WebElement w1=new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		w1.sendKeys(Value);
+APPLICATION_LOGS.debug("Enter"+ " " +Value +" in "+ Label);
+		}
+   public static void ClickLinkByHref(String linktext,String Label) throws InterruptedException	
+    {
+	   //WebDriverWait wait = new WebDriverWait(driver, 15); //you can play with the time integer  to wait for longer than 15 seconds.`
+	   //wait.until(ExpectedConditions.titleContains(title));
+	List<WebElement> anchors = driver.findElements(By.tagName("a"));
+	Iterator<WebElement> itr = anchors.iterator();
+	while(itr.hasNext()){
+		WebElement link = itr.next();
+        if(link.getAttribute("href").contains(linktext)){
+        	link.click();
+			break;
+		}
+		}
+	APPLICATION_LOGS.debug("Clicked on "+" "+ Label);
+	}	
+   
+   public static void SearchResults(String Classname,String linktext,String Label) throws InterruptedException	
+   {
+	   List<WebElement> anchors = driver.findElements(By.className(Classname));
+		Iterator<WebElement> itr = anchors.iterator();
+		int i=0;
+		int j=0;
+		while(itr.hasNext()){
+			WebElement E=itr.next();
+			i++;
+			if(E.getText().contains(linktext)){
+			System.out.println(E.getText());
+				j++;
+				}}
+		System.out.println("TotalResults"+i);
+				System.out.println("RequiredResults"+j);}
+  
+   public static void PhoneSelection(String anchorClassname,String MobileSelection ,String Label) throws InterruptedException	
+   {   
+	   List<WebElement> anchors = driver.findElements(By.className(anchorClassname));
+	
+		Iterator<WebElement> itr = anchors.iterator();
+		while(itr.hasNext()){
+			WebElement E=itr.next();
+			System.out.println(E.getText());
+			//String S=E.getAttribute("href").toString();
+			//System.out.println(S);
+		    //if(S.contains(MobileSelection)){
+				//System.out.println("Win");
+			//System.out.println(E.getText());
+			//E.click();
+			//break;}
+			}
+		  
+		}
+		
+		
+	public static void SearchResultsLinks(String linktext) throws InterruptedException	
+   {
+	   //WebDriverWait wait = new WebDriverWait(driver, 15); //you can play with the time integer  to wait for longer than 15 seconds.`
+	   //wait.until(ExpectedConditions.titleContains(title));
+	List<WebElement> anchors = driver.findElements(By.tagName("a"));
+	Iterator<WebElement> itr = anchors.iterator();
+	 //System.out.println(anchors.size());
+	int i=0;
+	while(itr.hasNext()){
+	WebElement link = itr.next();
+	
+   if(link.getAttribute("href").contains(linktext)){
+		 i++;
+		String S = link.getAttribute("href").toString();
+	    System.out.println(S);
+	   }
+   System.out.println(i);
+     break;
+ }
+
+		}
+	//APPLICATION_LOGS.debug("Clicked on "+" "+ Label);
+	
+	public static void WebButton(String xpath,String Label){
+
+		WebElement w1=new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+
+		w1.click();
+		
+	
+		APPLICATION_LOGS.debug("Click on " + Label +"Button");
+		
+	}
+
+	public static void WebDropDown(String xpath,String Value,String Label){
+		
+		WebElement w1 = driver.findElement(By.xpath(xpath));
+		String Tag = w1.getTagName();
+		if(Tag.equals("select")){
+			System.out.print("puri");
+			Select dropdown = new Select(w1);
+			List<WebElement> values = dropdown.getOptions();
+			int i = values.size();
+	         Iterator<WebElement> itr = values.iterator();
+		for(int j=0;j<=i+1;j++){
+			String dropdownoption = itr.next().getText();
+			if(dropdownoption.equals(Value)){
+				dropdown.selectByValue(Value);
+				break;
+			}
+			APPLICATION_LOGS.debug("Select  "+Value +" from "+Label +" DropDown ");
+		}}
+			else{
+				
+        w1.sendKeys();
+			int y = Integer.parseInt(Value);
+		
+			for(int i=0;i<y;i++)
+			{
+				Actions act = new Actions(driver);
+			act.sendKeys(Keys.DOWN).build().perform();
+				
+			}
+			
+			Actions actions = new Actions(driver);
+		    actions.sendKeys(Keys.ENTER).build().perform();
+			}
+		APPLICATION_LOGS.debug("Select  "+Value +" from "+Label +" DropDown ");
+			
+		}
+	public static void WebRadioButton(String xpath,String Label) throws Exception{		
+		WebElement E=driver.findElement(By.xpath(xpath));
+		if(E.isSelected()){;
+		
+			String Info=E.getAttribute("name")+"Already Selected";
+			APPLICATION_LOGS.debug(Info );
+			}
+		
+		else
+		{
+			E.click();
+			APPLICATION_LOGS.debug("Select  "+Label );
+		}
+	}
+	public static void WebCheckBox(String xpath,String Label) throws Exception{		
+		WebElement E=driver.findElement(By.xpath(xpath));
+		if(E.isSelected()){;
+		
+			String Info=E.getAttribute("name")+"Already Selected";
+			APPLICATION_LOGS.debug(Info );
+			}
+		
+		else
+		{
+			E.click();
+			APPLICATION_LOGS.debug("Check "+ Label +" CheckBox" );
+		}
+	}
+		
+	public static void GetWindowHandles() throws Exception{
+		Set<String> Allwindow = driver.getWindowHandles();
+		System.out.println("Number of Total Windows"+Allwindow.size());
+		for (String ids : Allwindow) {
+			   System.out.println("Total Id's"+ids);
+		  }
+		Iterator<String> itr = Allwindow.iterator(); 
+		String mainWindow = itr.next();
+	    String popUpWindow = itr.next();
+	    Thread.sleep(3000);
+	    
+	    //Finally we are switching it pop up window
+	    driver.switchTo().window(popUpWindow).close();
+	    driver.switchTo().window(mainWindow);
+	 	}
+	
+public static void GetFrames() throws IOException{
+		
+		List<WebElement> listTotalFrames = 	driver.findElements(By.tagName("frame"));
+		int TotalFrames = listTotalFrames.size();
+System.out.println(TotalFrames);		
+}
+	
+	public static void GetFrames(String xpath) throws IOException{
+		
+		List<WebElement> listTotalFrames = 	driver.findElements(By.tagName("frame"));
+		int TotalFrames = listTotalFrames.size();
+		for(int i=0;i<TotalFrames;i++)
+		{
+			driver.switchTo().defaultContent();
+			driver.switchTo().frame(i);
+	        String link = xpath;
+	int linksize = driver.findElements(By.xpath(link)).size();
+	if(linksize==1)
+	{
+		System.out.println("Frame No in which the element is found is: Frame  "  + i);
+	break;
+	}
+	else
+	{
+	System.out.println("element not found");
+	}
+	}	
+	}
+
+	public static void Screenprintcapture(String ScreenPrintName) throws IOException{	
+		//Type Conversion
+				TakesScreenshot ScreenPrint = (TakesScreenshot) driver;
+				 
+				 //With the help Take screen reference variable we have used GetScreenShotsAs method which comes Take screen shot Interface 
+				 File srcFile = ScreenPrint.getScreenshotAs(OutputType.FILE);
+				
+				 //Destination Folder
+				
+
+				 File destFile = new File("C:\\Users\\v-poori\\Desktop\\PoornimaInterniewrelated\\Screenprints\\"+ScreenPrintName+".jpeg");
+				 //Through file Utils we are copying source File to destination file
+				 FileUtils.copyFile(srcFile, destFile);
+					}
+
+				
+
+
+	
+	
+		public static  String GetAttribute(String Tag,String Attribute) throws IOException{
+			
+			
+	    String AttributeValue =   driver.findElement(By.tagName(Tag)).getAttribute(Attribute);
+	    return AttributeValue;			
+		}
+		public static void RightClick(WebElement Element)
+		{
+			Actions act = new Actions(driver);
+			act.contextClick().perform();
+			
+			}
+		public static void DoubleClick(WebElement Element1)
+		{
+			Actions act = new Actions(driver);
+			act.doubleClick(Element1).perform();
+			
+			}		
+		
+		public void HandleAlert()
+		{
+		//Create reference of Alert interface and make driver switch to 
+		//Alert
+		Alert alert = driver.switchTo().alert();
+	//Once it is switched to Alert get the text of the alert
+
+		System.out.println("Text of Alert"+alert.getText());
+	
+	//Through accept method Selenium automatically clicks OK button of the alter
+	//Through Dismiss method Selenium automatically closes the alert	
+		alert.accept();
+
+			}
+
+public void Handlepopup()
+{
+
+Set<String>  Popups= driver.getWindowHandles();
+int openedwindowcount = Popups.size();
+System.out.println("No of Windows Opened"+openedwindowcount);
+Iterator<String> itr = Popups.iterator();
+if(openedwindowcount>1){
+	String M1 = itr.next();
+	String P1= itr.next();
+	driver.switchTo().window(P1).close();
+	driver.switchTo().window(M1);
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+	
+	
+	 
+	
+}
+
+
+
+

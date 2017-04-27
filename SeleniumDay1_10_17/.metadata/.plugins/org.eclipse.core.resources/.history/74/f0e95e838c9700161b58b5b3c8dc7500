@@ -1,0 +1,33 @@
+package SeleniumDay1Learning;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class CertificatesIssue {
+	private WebDriver driver;
+	
+	@Before
+	public  void Chromecertresolve() throws Exception 
+	{
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\v-poori\\Desktop\\PoornimaInterniewrelated\\Selenium Code\\exe\\exe\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\CMAP\\automation\\appium\\Appium\\node_modules\\appium\\node_modules\\appium-chromedriver\\chromedriver\\win\\chromedriver.exe");
+			
+		
+	DesiredCapabilities Handle = (DesiredCapabilities) driver;
+	Handle.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		
+	WebDriver driver = new ChromeDriver(Handle);
+driver.get("https://onlineservices.tin.nsdl.com/etaxnew/tdsnontds.jsp");
+	}
+
+@Test
+	public void test()
+	{
+	}
+	
+
+}

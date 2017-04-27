@@ -1,0 +1,197 @@
+package SeleniumDay1Learning;
+import Utilities.TakeScreenshots;
+import static org.junit.Assert.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class HoverMouseoperationcase {
+private static WebDriver driver;
+
+@Before
+public void Setup() throws Exception{
+	
+	 //driver = new FirefoxDriver();
+	 //Handlepopup closepopup =  new Handlepopup();
+	    System.setProperty("webdriver.chrome.driver", "C:\\CMAP\\automation\\appium\\Appium\\node_modules\\appium\\node_modules\\appium-chromedriver\\chromedriver\\win\\chromedriver.exe");
+   WebDriver driver = new ChromeDriver();
+}
+	@Test
+	public void MouseHoveronTimeSheetLinkofNshore() throws  Exception {
+		
+		driver.get("https://nshore.hitachiconsulting.net/login/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		WebElement Username = driver.findElement(By.id("txtLogin"));
+		Username.sendKeys("primmanapudi");
+		WebElement Password = driver.findElement(By.id("txtPassword"));
+		Password.sendKeys("sony@w550i");
+	driver.findElement(By.xpath(".//*[@id='frmLogin']/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr/td/table/tbody/tr[3]/td/table/tbody/tr[1]/td[1]/div/a/img")).click();
+	
+	
+
+	driver.switchTo().frame(0);
+	driver.findElement(By.xpath(".//*[@id='frmLink']/table/tbody/tr[2]/td/table/tbody/tr/td[1]")).click();
+	System.out.println("clicked on Projects");
+	//Screenshot();
+	driver.switchTo().defaultContent();
+	driver.switchTo().frame(2);
+	//List<WebElement> TotalFrames = driver.findElements(By.tagName("frame"));
+	//int FramesSize = TotalFrames.size();
+	//System.out.println("No.of Frame"+FramesSize);
+	//for(int i=0;i<FramesSize;i++)
+		//{
+		//driver.switchTo().defaultContent();
+		String Projectselection = ".//*[@id='tblGrid032']/tbody/tr[4]/td[2]/a";
+		//System.out.println("i values"  +i);
+		//driver.switchTo().frame(i);
+		//int link = driver.findElements(By.xpath(Projectselection)).size();
+		//System.out.println("Link Value"+link);
+		//if(link==1)
+		//{
+		driver.findElement(By.xpath(Projectselection)).click();
+		//}
+	
+		//}
+	driver.switchTo().defaultContent();
+	driver.switchTo().frame(0);
+	//click on Timesheet
+	driver.findElement(By.xpath(".//*[@id='frmLink']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/a[4]")).click();
+	//Screenshot();
+	//print.ScreenPrintsUtilityFile();
+	System.out.println("clickedontimesheet");
+	//click on weekly view
+	//List<WebElement> Frameslist = driver.findElements(By.tagName("frame"));
+	//int frametotal = Frameslist.size();
+	//System.out.println("No.of Frame"+frametotal);
+	//for(int j=0;j<frametotal;j++)
+	//{
+		//driver.switchTo().defaultContent();
+		//driver.switchTo().frame(j);
+		driver.switchTo().frame(2);
+		String weeklyviewlink = ".//*[@id='DA']/table[1]/tbody/tr/td[2]/a[3]";
+		//int linkthere = driver.findElements(By.xpath(weeklyviewlink)).size();
+		//System.out.println("Value j"+j);
+		//System.out.println("linksize"+linkthere);
+		//if(linkthere==1)
+		//{
+		//	System.out.println("Clicking onweeklyview");
+			driver.findElement(By.xpath(weeklyviewlink)).click();
+		//}
+	//}
+		
+				
+	driver.switchTo().defaultContent();
+	
+	//.out.println("Clicking onweeklyview");
+	//driver.findElement(By.xpath(".//*[@id='DA']/table[1]/tbody/tr/td[2]/a[3]")).click();
+	//List<WebElement> TotalFrames1 = driver.findElements(By.tagName("frame"));
+	//int FramesSize1 = TotalFrames1.size();
+	//System.out.println("No.of Frame"+FramesSize1);
+	//for(int i=0;i<FramesSize1;i++)
+		//{
+		//driver.switchTo().defaultContent();
+	String GeneralTasks = "optGeneralTasks";
+	//driver.switchTo().frame(i);
+	driver.switchTo().frame(2);
+	//System.out.println("I value"+i);
+	//int radio = driver.findElements(By.id(GeneralTasks)).size();
+	//if (radio==1)
+		
+	//{
+		WebElement Generaltsksradiobutton = driver.findElement(By.id("optGeneralTasks"));
+		Generaltsksradiobutton.click();
+		//Screenshot();
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(2);
+		//List<WebElement> Frames1= driver.findElements(By.tagName("frame"));
+		//int frmtotl = Frames1.size();
+		//System.out.println("Frames assignedteaskpage"+frmtotl);
+		//for(int k=0;k<frmtotl;k++)
+		//{
+			//driver.switchTo().defaultContent();
+			//driver.switchTo().frame(k);
+			String assignedlink = ".//*[@id='optAssignedTasks']";
+			//int link = driver.findElements(By.xpath(assignedlink)).size();
+			//System.out.println("K value"+k);
+			//System.out.println("link value"+link);
+			//if(link==1)
+			//{
+				
+				driver.findElement(By.xpath(assignedlink)).click();;
+			//}
+					
+			
+			
+		//}
+	//Clicking on the Project drop down
+				driver.switchTo().defaultContent();
+				driver.switchTo().frame(2);
+		Select project = new Select(driver.findElement(By.xpath(".//*[@id='cboProject']")));
+		List<WebElement> projectdropdown = project.getOptions();
+		
+		Thread.sleep(2000);
+		
+		int Prjectlist = projectdropdown.size();
+		for(int i=0;i<=Prjectlist;i++)
+			{
+			projectdropdown.s
+			
+			}
+		//projectdropdown.selectByIndex(0);
+		//Thread.sleep(2000);
+		//projectdropdown.selectByIndex(2);
+		//driver.switchTo().frame(2);
+		//WebElement Assignedtasks = driver.findElement(By.id(".//*[@id='optAssignedTasks']"));
+		
+		//Assignedtasks.click();
+	//}
+	
+		}
+	
+	//driver.switchTo().frame(1);
+	//driver.findElement(By.xpath(".//*[@id='tblGrid032']/tbody/tr[4]/td[2]/a")).click();
+	//driver.switchTo().defaultContent();
+	//String Timesheetxpath = ".//*[@id='frmLink']/table/tbody/tr[2]/td/table/tbody/tr/td[1]/a[4]";
+	//driver.switchTo().frame(0);
+	//driver.findElement(By.xpath(Timesheetxpath)).click();
+	//driver.switchTo().frame(1);
+	//driver.findElement(By.xpath("driver.switchTo().frame(1")).click();
+	//int HoverOnTimeSheets = driver.findElements(By.xpath(Timesheetxpath)).size();
+	//System.out.println("Link  Size:"+HoverOnTimeSheets);
+	//if(HoverOnTimeSheets==1){
+		
+   //For Mouse Hover action instantiate and object of Action Class
+	//Actions HoverMouse = new Actions(driver);
+
+	//HoverMouse.moveToElement(driver.findElement(By.xpath(Timesheetxpath))).build().perform();
+	
+	//}
+	
+	//}
+
+
+}
+
+
+
+
+
